@@ -60,6 +60,10 @@ out:
 //        printk(KERN_INFO "{NEK Tech}: ret=%ld filepath=%s", ret, filepath->filePathName);
         return ret;
 }
+
+/*This nektech_logger code when called it check whether the file activity has been performed from remote server or local server.
+It also checks whether the activity has been performed from sshd service and also prints the corresponding message with the file path.*/
+
 void nektech_logger (struct inode *inode, struct dentry *dir, const char *func)
 {
         int ret = 0, err =0;
